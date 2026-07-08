@@ -26,23 +26,17 @@ TFM_reproducibility_material/
 ```
 
 
-
 ## Environment
-
-```
 The exact conda environment used to run the pipeline on the Picasso HPC cluster (environment name `hanabi_bilby260`) is provided in [`environment_full.yml`](environment_full.yml). To recreate it:
-
-```
+```bash
 conda env create -f environment_full.yml
-
-Key packages include bilby, bilby_pipe, hanabi, and ligo.skymap.
-
-Pipeline overview
+```
+Key packages include `bilby`, `bilby_pipe`, `hanabi`, and `ligo.skymap`.
+## Pipeline overview
 The full pipeline is described in Chapter 5 of the thesis ("Parameter estimation pipeline"):
-
-picasso/: single-image analysis with bilby_pipe and joint analysis with hanabi_joint_pipe, automated on the Picasso HPC cluster via SLURM.
-post_process_CIT/: sky map generation and PESummary post-processing, run on LIGO's computing cluster at Caltech (CIT) via HTCondor.
-A representative pair of single-image/joint .ini configuration files is reproduced in Appendix C of the thesis.
+- **`picasso/`**: single-image analysis with `bilby_pipe` and joint analysis with `hanabi_joint_pipe`, automated on the Picasso HPC cluster via SLURM.
+- **`post_process_CIT/`**: sky map generation and `PESummary` post-processing, run on LIGO's computing cluster at Caltech (CIT) via HTCondor.
+A representative pair of single-image/joint `.ini` configuration files is reproduced in Appendix C of the thesis.
 
 
 
