@@ -31,7 +31,7 @@ The exact conda environment used to run the pipeline on the Picasso HPC cluster 
 ```bash
 conda env create -f environment_full.yml
 ```
-Key packages include `bilby`, `bilby_pipe`, `hanabi`, and `ligo.skymap`.
+Key packages include `bilby`, `bilby_pipe` and `hanabi`.
 ## Pipeline overview
 The full pipeline is described in Chapter 5 of the thesis ("Parameter estimation pipeline"):
 - **`picasso/`**: single-image analysis with `bilby_pipe` and joint analysis with `hanabi_joint_pipe`, automated on the Picasso HPC cluster via SLURM.
