@@ -1,0 +1,21 @@
+#condor_submit skymap.submit (do it on the terminal with ssh not jupiter)
+
+universe                = vanilla
+executable              = env_skymap_condor.sh
+arguments               = 79
+#$(Process)
+
+#output                  = logs/skymap.$(Process).out
+#error                   = logs/skymap.$(Process).err
+output                   = logs/skymap.79.out
+error                    = logs/skymap.79.err
+log                      = logs/skymap.log
+
+request_cpus            = 1
+request_memory          = 6 GB
+request_disk            = 5 GB
+
+accounting_group        = ligo.dev.o4.cbc.explore.test
+accounting_group_user   = xavier.garcia-sabat
+
+queue 1

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#SBATCH --job-name=postprocess_inj{inj_id}
+#SBATCH --output=/mnt/home/users/uib54_res/resh000464/lenskyloc/lenskyloc_runs/inj{inj_id}/inj{inj_id}_joint/submit/postprocess_inj{inj_id}.out
+#SBATCH --error=/mnt/home/users/uib54_res/resh000464/lenskyloc/lenskyloc_runs/inj{inj_id}/inj{inj_id}_joint/submit/postprocess_inj{inj_id}.err
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=128
+#SBATCH --mem=180G
+#SBATCH --constraint=cal
+#SBATCH --time 1-00:00
+#SBATCH --chdir=/mnt/home/users/uib54_res/resh000464/lenskyloc/lenskyloc_runs/inj{inj_id}
+
+# Run hanabi postprocessing
+hanabi_postprocess_result --generate-snrs --n-triggers 2 --trigger-ini-files {single1_ini} --trigger-ini-files {single2_ini} --data-dump-files {img1_data_dump} --data-dump-files {img2_data_dump} --output-filename {postprocess_output} {joint_result}
+

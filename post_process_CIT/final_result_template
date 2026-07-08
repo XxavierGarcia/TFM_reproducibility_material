@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#SBATCH --job-name=final_result_inj{inj_id}
+#SBATCH --output=/mnt/home/users/uib54_res/resh000464/lenskyloc/lenskyloc_runs/inj{inj_id}/inj{inj_id}_joint/submit/final_result.out
+#SBATCH --error=/mnt/home/users/uib54_res/resh000464/lenskyloc/lenskyloc_runs/inj{inj_id}/inj{inj_id}_joint/submit/final_result.err
+#SBATCH --ntasks=1
+#SBATCH --mem=4G
+#SBATCH --constraint=cal
+#SBATCH --time=1:00:00
+
+/mnt/home/users/uib54_res/resh000464/miniforge3/envs/hanabi_bilby260/bin/bilby_result \
+  --result {joint_result} \
+  --outdir {joint_final_dir} \
+  --extension json \
+  --max-samples 20000 \
+  --lightweight \
+  --save

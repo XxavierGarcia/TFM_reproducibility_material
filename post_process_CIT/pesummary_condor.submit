@@ -1,0 +1,28 @@
+# HTCondor Submit File
+
+#condor_submit pesummary_condor.submit (do it on the terminal with ssh not jupiter)
+
+#execution environment
+universe                = vanilla  
+executable              = env_pesummary_condor.sh
+#automatically numbers jobs from 0 to N-1
+arguments               = $(Process) 
+
+#This file captures everything the script prints to the console
+output                  = logs/pesummary.$(Process).out 
+#This captures any error messages or crashes
+error                   = logs/pesummary.$(Process).err 
+log                     = logs/pesummary.log 
+
+request_cpus            = 1
+request_memory          = 8 GB
+request_disk            = 5 GB
+
+#project group responsible for the CPU time
+accounting_group        = ligo.dev.o4.cbc.explore.test  
+accounting_group_user  = xavier.garcia-sabat
+
+#launch it 157 times
+queue 157
+
+
