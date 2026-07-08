@@ -7,7 +7,7 @@ This repository contains the material associated with the MSc thesis "Parameter 
 ```
 TFM_reproducibility_material/
 ├── environment_full.yml       # exact conda environment used on Picasso (hanabi_bilby260)
-├── picasso/                   # SLURM-based parameter estimation pipeline
+├── pipeline_picasso_slurm/                   # SLURM-based parameter estimation pipeline
 │   ├── Generator_inis_lenskyloc.py
 │   ├── lenskyloc_inj_hanabi_single.ini
 │   ├── lenskyloc_inj_hanabi_joint.ini
