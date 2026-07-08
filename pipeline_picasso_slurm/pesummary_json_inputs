@@ -1,0 +1,11 @@
+#execute it with bash, this code creates a file with all the 
+#json final results (image1,2 and joint) of each event for the pesummary
+
+mkdir -p pesummary_jsons_all
+
+for inj in inj*; do
+  cp lenskyloc_runs/$inj/${inj}_img1/final_result/*result.json pesummary_jsons_all/
+  cp lenskyloc_runs/$inj/${inj}_img2/final_result/*result.json pesummary_jsons_all/
+  cp lenskyloc_runs/$inj/${inj}_joint/final_result/*result.json pesummary_jsons_all/
+done
+

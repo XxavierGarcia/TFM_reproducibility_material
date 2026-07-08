@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#SBATCH --job-name=summarypages_job
+#SBATCH --output=/mnt/home/users/uib54_res/resh000464/lenskyloc/lenskyloc_runs/inj{inj_id}/summarypages_inj{inj_id}.out
+#SBATCH --error=/mnt/home/users/uib54_res/resh000464/lenskyloc/lenskyloc_runs/inj{inj_id}/summarypages_inj{inj_id}.err
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem=12G
+#SBATCH --constraint=cal
+#SBATCH --time 1-00:00
+
+# Execute summarypages
+summarypages \
+  --webdir /mnt/home/users/uib54_res/resh000464/lenskyloc/lenskyloc_runs/inj{inj_id}/pesummaries_inj{inj_id}/inj{inj_id}_final \
+  --samples \
+    {img1_result} \
+    {joint_result} \
+    {img2_result} \
+  --labels \
+    inj{inj_id}_image1 inj{inj_id}_joint inj{inj_id}_image2 \
+  --gw \
+  --no_ligo_skymap \
+  --disable_interactive

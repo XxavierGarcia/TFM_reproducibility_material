@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --job-name=skymap_injXXX
+#SBATCH --output=/mnt/home/users/uib54_res/resh000464/lenskyloc/lenskyloc_runs/injXXX/skymap_injXXX.out
+#SBATCH --error=/mnt/home/users/uib54_res/resh000464/lenskyloc/lenskyloc_runs/injXXX/skymap_injXXX.err
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=8G
+#SBATCH --constraint=cal
+#SBATCH --time=02:00:00
+
+BASE=/mnt/home/users/uib54_res/resh000464/lenskyloc
+cd $BASE || exit 1
+
+python make_skymap.py injXXX
