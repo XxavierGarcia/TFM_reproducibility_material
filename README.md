@@ -29,10 +29,10 @@ TFM_reproducibility_material/
 
 ## Environment
 
-```markdown
+```
 The exact conda environment used to run the pipeline on the Picasso HPC cluster (environment name `hanabi_bilby260`) is provided in [`environment_full.yml`](environment_full.yml). To recreate it:
 
-```bash
+```
 conda env create -f environment_full.yml
 
 Key packages include bilby, bilby_pipe, hanabi, and ligo.skymap.
