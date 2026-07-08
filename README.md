@@ -34,7 +34,7 @@ conda env create -f environment_full.yml
 Key packages include `bilby`, `bilby_pipe` and `hanabi`.
 ## Pipeline overview
 The full pipeline is described in Chapter 5 of the thesis ("Parameter estimation pipeline"):
-- **`picasso/`**: single-image analysis with `bilby_pipe` and joint analysis with `hanabi_joint_pipe`, automated on the Picasso HPC cluster via SLURM.
+- **`pipeline_picasso_slurm/`**: single-image analysis with `bilby_pipe` and joint analysis with `hanabi_joint_pipe`, automated on the Picasso HPC cluster via SLURM.
 - **`post_process_CIT/`**: sky map generation and `PESummary` post-processing, run on LIGO's computing cluster at Caltech (CIT) via HTCondor.
 A representative pair of single-image/joint `.ini` configuration files is reproduced in Appendix C of the thesis.
 
