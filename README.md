@@ -33,6 +33,11 @@ The exact conda environment used to run the pipeline on the Picasso HPC cluster 
 conda env create -f environment_full.yml
 ```
 Key packages include `bilby`, `bilby_pipe` and `hanabi`.
+
+## Pipeline diagram
+
+[`diagrama_pipeline.drawio.pdf`](diagrama_pipeline.drawio.pdf) shows the full pipeline, with each script, template, and text file linked directly to its location in this repository. GitHub's in-browser PDF preview does not support clickable links, so download the file and open it in a local PDF viewer to use them.
+
 ## Pipeline overview
 The full pipeline is described in Chapter 5 of the thesis ("Parameter estimation pipeline"):
 - **`pipeline_picasso_slurm/`**: single-image analysis with `bilby_pipe` and joint analysis with `hanabi_joint_pipe`, automated on the Picasso HPC cluster via SLURM.
