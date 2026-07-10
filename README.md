@@ -34,7 +34,7 @@ conda env create -f environment_full.yml
 ```
 Key packages include `bilby`, `bilby_pipe` and `hanabi`.
 
-## Pipeline diagram
+## Pipeline diagram (very useful)
 
 [`diagrama_pipeline.drawio.pdf`](diagrama_pipeline.drawio.pdf) shows the full pipeline, with each script, template, and text file linked directly to its location in this repository. GitHub's in-browser PDF preview does not support clickable links, so download the file and open it in a local PDF viewer to use them.
 
