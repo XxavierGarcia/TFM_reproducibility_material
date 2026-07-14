@@ -28,12 +28,16 @@ TFM_reproducibility_material/
 
 
 ## Environment
+
 The exact conda environment used to run the pipeline on the Picasso HPC cluster (environment name `hanabi_bilby260`) is provided in [`environment_full.yml`](environment_full.yml). To recreate it:
+
 ```bash
 conda env create -f environment_full.yml
 ```
-Key packages include `bilby`, `bilby_pipe` and `hanabi`.
 
+For convenience, a shorter version containing only the main packages is also provided in [`environment_clean.yml`](environment_clean.yml). This version relies on Conda to resolve the remaining dependencies automatically.
+
+Key packages include `bilby`, `bilby_pipe`, and `hanabi`.
 ## Pipeline diagram (very useful)
 
 [`diagrama_pipeline.drawio.pdf`](diagrama_pipeline.drawio.pdf) shows the full pipeline, with each script, template, and text file linked directly to its location in this repository. GitHub's in-browser PDF preview does not support clickable links, so download the file and open it in a local PDF viewer to use them.
