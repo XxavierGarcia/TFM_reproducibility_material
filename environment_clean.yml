@@ -1,0 +1,17 @@
+name: hanabi_bilby260
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.10
+  - bilby=2.6.0
+  - bilby_pipe=1.6.0
+  - ligo.skymap
+  - mpi4py
+  - openmpi
+  - pip
+
+  - pip:
+      - hanabi==0.4.7
+      - parallel-bilby==2.0.2
+      - gwpopulation==1.2.1
